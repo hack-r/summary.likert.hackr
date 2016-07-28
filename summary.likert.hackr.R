@@ -19,7 +19,7 @@
 #' @param ... currently unused.
 #' @export
 #' @method summary likert
-summary.likert <- function(object, center=(object$nlevels-1)/2 + 1,
+summary.likert.hackr <- function(object, center=(object$nlevels-1)/2 + 1,
                            ordered=TRUE, ...) {
   if(center < 1.5 | center > (object$nlevels - 0.5) | center %% 0.5 != 0) {
     stop(paste0('Invalid center. Values can range from 1.5 to ', 
